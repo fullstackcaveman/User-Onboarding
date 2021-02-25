@@ -37,6 +37,8 @@ function App() {
 	const [formErrors, setFormErrors] = useState(initialFormErrors);
 	const [disabled, setDisabled] = useState(initialSubmitDisabled);
 
+	const hidden = document.querySelector('.add-user');
+
 	// GET user from database
 	const getUsers = () => {
 		axios
@@ -62,6 +64,7 @@ function App() {
 				console.log(err);
 			});
 		setFormValues(initialFormvalues);
+		hidden.classList.add('hidden');
 	};
 
 	// Call function to get users from database
@@ -90,7 +93,6 @@ function App() {
 	};
 
 	const showForm = () => {
-		const hidden = document.querySelector('.add-user');
 		hidden.classList.remove('hidden');
 	};
 

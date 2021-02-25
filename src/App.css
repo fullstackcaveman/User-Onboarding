@@ -81,6 +81,8 @@ button {
 .avatar {
 	box-shadow: 2px 2px 5px black;
 	border-radius: 5px;
+	max-width: 128px;
+	max-height: 128px;
 }
 
 .hidden {
@@ -99,4 +101,10 @@ button {
 	position: relative;
 	top: -41px;
 	left: 90px;
+	cursor: pointer;
+}
+
+.btn-add-user {
+	padding: 3px 5px;
+	cursor: pointer;
 }
