@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Form = (props) => {
 	const { values, submit, change, disabled, errors, resetform } = props;
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import missing from '../images/placeholder.jpg';
 
 const User = ({ details }) => {
