@@ -89,6 +89,11 @@ function App() {
 		setFormValues({ ...formValues, [name]: value });
 	};
 
+	const showForm = () => {
+		const hidden = document.querySelector('.add-user');
+		hidden.classList.remove('hidden');
+	};
+
 	// Use form values to pass a new user to postNewUser()
 	const formSubmit = () => {
 		const newUser = {
@@ -102,16 +107,27 @@ function App() {
 		postNewUser(newUser);
 	};
 
+	const resetForm = () => {
+		setFormValues(initialFormvalues);
+	};
+
 	return (
 		<div className='App'>
-			<h1>Current Users</h1>
-			<Form
-				values={formValues}
-				change={inputChange}
-				submit={formSubmit}
-				disabled={disabled}
-				errors={formErrors}
-			/>
+			<h1>Registered Users</h1>
+			<button className='btn-add-user' onClick={showForm}>
+				ADD NEW USER
+			</button>
+			<div className='add-user hidden'>
+				<Form
+					values={formValues}
+					change={inputChange}
+					submit={formSubmit}
+					disabled={disabled}
+					errors={formErrors}
+					resetform={resetForm}
+				/>
+			</div>
+			<div></div>
 			<div className='flex'>
 				{users.map((user) => {
 					return <User key={user.id} details={user} />;
