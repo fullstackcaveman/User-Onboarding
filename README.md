@@ -53,10 +53,10 @@ When you get your data back, you will want to do something with it, right? Let's
 
 The following are stretch goals that you should attempt _after_ you meet MVP for your project:
 
-- [ ] Add basic styling to your form in your app. Make it look pretty with any styling method you choose.
-- [ ] Implement a dropdown menu in your form. Add a `role` value to your state and add a dropdown with different roles for your users.
-- [ ] Create 3 new inputs inside your form of your choice along with corresponding validation and error messaging
-- [ ] Add to your existing handling so that, if a user inputs their email as `waffle@syrup.com`, they receive an error message in their form that says _"That email is already taken."_
+- [x] Add basic styling to your form in your app. Make it look pretty with any styling method you choose.
+- [x] Implement a dropdown menu in your form. Add a `role` value to your state and add a dropdown with different roles for your users.
+- [x] Create 3 new inputs inside your form of your choice along with corresponding validation and error messaging
+- [x] Add to your existing handling so that, if a user inputs their email as `waffle@syrup.com`, they receive an error message in their form that says _"That email is already taken."_
 
 ## Submission Format
 
@@ -109,13 +109,13 @@ In order to complete this challenge you will need to write and run the following
 
 Set up tests that will...
 
-- [ ] Get the `Name` input and type a name in it.
-- [ ] Use an assertion to check if the text inputted contains the name you provided (Hint: use the .should assertion)
-- [ ] Get the `Email` input and type an email address in it
-- [ ] Get the `password` input and type a password in it
-- [ ] Set up a test that will check to see if a user can check the terms of service box
-- [ ] Check to see if a user can submit the form data
-- [ ] Check for form validation if an input is left empty
+- [x] Get the `Name` input and type a name in it.
+- [x] Use an assertion to check if the text inputted contains the name you provided (Hint: use the .should assertion)
+- [x] Get the `Email` input and type an email address in it
+- [x] Get the `password` input and type a password in it
+- [x] Set up a test that will check to see if a user can check the terms of service box
+- [x] Check to see if a user can submit the form data
+- [x] Check for form validation if an input is left empty
 
 ### Task 3: Stretch Goals
 
@@ -137,4 +137,4 @@ _Depending on the quality of your code from previous lessons, your tests might n
 
 ## Submission Format
 
-- [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's Repo). **Please don't merge your own pull request**
+- [x] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's Repo). **Please don't merge your own pull request**

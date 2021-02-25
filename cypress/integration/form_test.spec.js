@@ -52,7 +52,7 @@ describe('Registered Users App', () => {
 	});
 
 	describe('form validation tests', () => {
-		it('form input tests', () => {
+		it('form input validation tests', () => {
 			firstNameInput().type('C{backspace}');
 			firstNameAlert().should(
 				'have.text',
@@ -64,19 +64,57 @@ describe('Registered Users App', () => {
 				'have.text',
 				'Last Name is required, please fill out.'
 			);
+			lastNameInput().clear();
 			submitBtn().should('be.disabled');
 			emailInput().type('chris.com');
 			emailAlert().should('have.text', 'Must be a valid email address');
+			emailInput().clear();
 			submitBtn().should('be.disabled');
 			passwordInput().type('12345');
 			passwordAlert().should(
 				'have.text',
 				'Password must be at leaset 6 characters'
 			);
+			passwordInput().clear();
 			submitBtn().should('be.disabled');
 			checkbox().click().click();
 			tosAlert().should('have.text', 'You must accept the Terms of Service');
 			submitBtn().should('be.disabled');
+		});
+	});
+
+	describe('form submit test', () => {
+		it('form submit tests', () => {
+			firstNameInput().type('John').should('have.value', 'John');
+			lastNameInput().type('Smith').should('have.value', 'Smith');
+			emailInput()
+				.type('john@smith.com')
+				.should('have.value', 'john@smith.com');
+			passwordInput().type('123456').should('have.value', '123456');
+			checkbox().click();
+			submitBtn().should('be.enabled');
+			submitBtn().click();
+			cy.get('.add-user.hidden').should('exist');
+			cy.get('#JohnSmith').should('exist');
+		});
+	});
+
+	describe('form cancel button', () => {
+		it('cancel button clears and closes form', () => {
+			cy.contains('ADD NEW USER').click();
+			firstNameInput().type('John');
+			lastNameInput().type('Smith');
+			emailInput().type('john@smith.com');
+			passwordInput().type('123456');
+			checkbox().click();
+			cancelBtn().click();
+			cy.contains('ADD NEW USER').click();
+			firstNameInput().should('have.value', '');
+			lastNameInput().should('have.value', '');
+			emailInput().should('have.value', '');
+			passwordInput().should('have.value', '');
+			checkbox().should('not.be.checked');
+			cancelBtn().click();
 		});
 	});
 });

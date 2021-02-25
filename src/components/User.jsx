@@ -7,7 +7,7 @@ const User = ({ details }) => {
 	}
 
 	return (
-		<div className='user container'>
+		<div id={details.first_name + details.last_name} className='user container'>
 			{!details.avatar ? (
 				<img className='avatar' src={missing} alt='coming soon' />
 			) : (
