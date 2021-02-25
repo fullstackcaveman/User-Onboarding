@@ -104,7 +104,7 @@ function App() {
 
 	return (
 		<div className='App'>
-			<h1>APP IS WORKING</h1>
+			<h1>Current Users</h1>
 			<Form
 				values={formValues}
 				change={inputChange}
@@ -112,10 +112,11 @@ function App() {
 				disabled={disabled}
 				errors={formErrors}
 			/>
-
-			{users.map((user) => {
-				return <User key={user.id} details={user} />;
-			})}
+			<div className='flex'>
+				{users.map((user) => {
+					return <User key={user.id} details={user} />;
+				})}
+			</div>
 		</div>
 	);
 }

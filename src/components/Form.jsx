@@ -29,45 +29,38 @@ const Form = (props) => {
 			</div>
 
 			<div className='form-group inputs'>
-				<label>
-					First Name
-					<input
-						type='text'
-						name='first_name'
-						value={values.first_name || ''}
-						onChange={onChange}
-					/>
-				</label>
-				<label>
-					Last Name
-					<input
-						type='text'
-						name='last_name'
-						value={values.last_name || ''}
-						onChange={onChange}
-					/>
-				</label>
-				<label>
-					User Email
-					<input
-						type='email'
-						name='email'
-						value={values.email || ''}
-						onChange={onChange}
-					/>
-				</label>
-				<label>
-					Password
-					<input
-						type='password'
-						name='password'
-						value={values.password || ''}
-						onChange={onChange}
-					/>
-				</label>
+				<input
+					type='text'
+					name='first_name'
+					value={values.first_name || ''}
+					onChange={onChange}
+					placeholder='Enter first name'
+				/>
+				<input
+					type='text'
+					name='last_name'
+					value={values.last_name || ''}
+					onChange={onChange}
+					placeholder='Enter last name'
+				/>
+				<input
+					type='email'
+					name='email'
+					value={values.email || ''}
+					onChange={onChange}
+					placeholder='Enter email'
+				/>
+				<input
+					type='password'
+					name='password'
+					value={values.password || ''}
+					onChange={onChange}
+					placeholder='Enter password'
+				/>
 				<label>
 					Terms of Service
 					<input
+						className='check'
 						type='checkbox'
 						name='tos'
 						onChange={onChange}
