@@ -1,0 +1,114 @@
+.App {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.5s ease-in-out;
+}
+
+.form.container {
+	width: 300px;
+}
+
+.form-group {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+}
+
+.form-group input {
+	margin: 3px auto;
+	height: 20px;
+	width: 200px;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.form-group label {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 200px;
+	margin-left: 30px;
+}
+
+.form-group .check {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 20px;
+	margin: none;
+	padding: none;
+}
+
+.errors {
+	color: red;
+}
+
+button {
+	margin: 10px 0;
+}
+
+.user.container {
+	border: 2px solid black;
+	padding: 10px;
+	width: 250px;
+	margin: 10px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 7px black;
+}
+
+.user.container a {
+	text-decoration: none;
+	color: royalblue;
+}
+
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	border-top: 2px solid black;
+	margin-top: 20px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.avatar {
+	box-shadow: 2px 2px 5px black;
+	border-radius: 5px;
+	max-width: 128px;
+	max-height: 128px;
+}
+
+.hidden {
+	display: none;
+}
+
+.btn-submit {
+	width: 200px;
+	margin-left: 8px;
+}
+
+.btn-cancel-container {
+	position: relative;
+	width: 200px;
+}
+
+.btn-cancel {
+	position: relative;
+	top: -41px;
+	left: 90px;
+	cursor: pointer;
+}
+
+.btn-add-user {
+	padding: 3px 5px;
+	cursor: pointer;
+}
