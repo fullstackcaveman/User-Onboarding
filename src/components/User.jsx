@@ -14,12 +14,15 @@ const User = ({ details }) => {
 				<img className='avatar' src={details.avatar} alt={details.last_name} />
 			)}
 
-			<h2>
+			<h2 className='user-name'>
 				{details.first_name} {details.last_name}
 			</h2>
-			<p>
+			<p className='user-info'>
 				<span className='bold'>Email:</span>
-				<a href={`mailto:${details.email}`}> {details.email}</a>
+				<a className='user-email-link' href={`mailto:${details.email}`}>
+					{' '}
+					{details.email}
+				</a>
 			</p>
 		</div>
 	);

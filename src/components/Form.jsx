@@ -29,11 +29,11 @@ const Form = (props) => {
 					<h2>Add New User</h2>
 
 					<div className='errors'>
-						<div>{errors.first_name}</div>
-						<div>{errors.last_name}</div>
-						<div>{errors.email}</div>
-						<div>{errors.password}</div>
-						<div>{errors.tos}</div>
+						<div className='alert-first-name'>{errors.first_name}</div>
+						<div className='alert-last-name'>{errors.last_name}</div>
+						<div className='alert-email'>{errors.email}</div>
+						<div className='alert-password'>{errors.password}</div>
+						<div className='alert-tos'>{errors.tos}</div>
 					</div>
 				</div>
 
@@ -66,7 +66,7 @@ const Form = (props) => {
 						onChange={onChange}
 						placeholder='Enter password'
 					/>
-					<label>
+					<label className='tos'>
 						Terms of Service
 						<input
 							className='check'
@@ -78,7 +78,7 @@ const Form = (props) => {
 					</label>
 				</div>
 				<div className='btn-submit'>
-					<button disabled={disabled} className='green'>
+					<button disabled={disabled} className='submit'>
 						Submit
 					</button>
 				</div>
