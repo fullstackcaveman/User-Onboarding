@@ -76,7 +76,9 @@ const Form = (props) => {
 					</label>
 				</div>
 				<div className='btn-submit'>
-					<button disabled={disabled}>Submit</button>
+					<button disabled={disabled} className='green'>
+						Submit
+					</button>
 				</div>
 			</form>
 			<div className='btn-cancel-container'>
