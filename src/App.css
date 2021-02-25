@@ -23,6 +23,8 @@
 	margin: 3px auto;
 	height: 20px;
 	width: 200px;
+	padding: 5px;
+	border-radius: 5px;
 }
 
 .form-group label {

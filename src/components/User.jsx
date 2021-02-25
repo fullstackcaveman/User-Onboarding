@@ -8,7 +8,7 @@ const User = ({ details }) => {
 	return (
 		<div className='user container'>
 			{!details.avatar ? (
-				<img className='avatar' src={missing} alt='image coming soon' />
+				<img className='avatar' src={missing} alt='coming soon' />
 			) : (
 				<img className='avatar' src={details.avatar} alt={details.last_name} />
 			)}

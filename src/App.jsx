@@ -58,7 +58,6 @@ function App() {
 			.post('https://reqres.in/api/users', newUser)
 			.then((res) => {
 				setUsers([res.data, ...users]);
-				console.log(res.data);
 			})
 			.catch((err) => {
 				console.log(err);
