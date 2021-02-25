@@ -59,8 +59,24 @@ button {
 	border-radius: 5px;
 }
 
+.user.container a {
+	text-decoration: none;
+	color: royalblue;
+}
+
 .flex {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	border-top: 2px solid black;
+	margin-top: 20px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.avatar {
+	box-shadow: 2px 2px 5px black;
+	border-radius: 5px;
 }

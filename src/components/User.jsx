@@ -5,10 +5,14 @@ const User = ({ details }) => {
 
 	return (
 		<div className='user container'>
+			<img className='avatar' src={details.avatar} alt='' />
 			<h2>
 				{details.first_name} {details.last_name}
 			</h2>
-			<p>Email: {details.email}</p>
+			<p>
+				<span className='bold'>Email:</span>
+				<a href={`mailto:${details.email}`}> {details.email}</a>
+			</p>
 		</div>
 	);
 };
